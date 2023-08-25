@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Holokitab Catalogue Sample</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+  <style>
+    .model-list-group model-viewer {
+      border: 2px solid #000000;
+      box-sizing: border-box;
+    }
+    .model-viewer-wrapper {
+      position: relative;
+      min-height: 200px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Holokitab Catalogue Sample</h1>
+  </header>
+
+  <section class="model-selection">
+    <h2>Choose a 3D Model:</h2>
+    <div class="model-list">
+      <figure class="model-viewer-wrapper" onclick="openModelViewer('modelViewerNew')">
+        <model-viewer id="modelViewerNew" alt="New Model" src="./models/House_Final.glb" loading="eager" camera-controls autoplay ar ar-modes="scene-viewer quick-look webxr" background-color="#EEEEEE" ar-placement="floor"></model-viewer>
+        <figcaption>toy_maze</figcaption>
+      </figure>
+      
+
+    </div>
+  </section>
+
+  <footer>
+    <p>Powered by Holokitab</p>
+  </footer>
+
+  <script>
+    function openModelViewer(id) {
+      const modelViewer = document.getElementById(id);
+      modelViewer.activateAR();
+    }
+  </script>
+
+</body>
+</html>
